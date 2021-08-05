@@ -1,0 +1,63 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #f0e6cf;
+}
+.search-container {
+  display: flex;
+
+  padding: 1rem;
+  margin: 1rem 0.5rem;
+}
+.search-container > input {
+  outline: none;
+  border: none;
+  width: 50%;
+  padding: 0.5rem;
+  border-radius: 5px 0 0 5px;
+  box-shadow: 0 0 5px 0 #767575;
+}
+.search-container > button {
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #f2923f;
+  box-shadow: 0 0 5px 0 #767575;
+}
+.ql-toolbar {
+  position: fixed;
+  bottom: 0;
+  height: 8vh;
+  z-index: 1;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  background: #b3ac9d;
+}
+.text-editor {
+  width: 100vw;
+  height: 90vh;
+}
+.ql-container {
+  width: 100%;
+  height: 80%;
+}
+.ql-editor {
+  margin: 1rem;
+  box-shadow: 0 0 5px 0 #333;
+  background: #fff8e8;
+}
+
+.rhyme-container {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
