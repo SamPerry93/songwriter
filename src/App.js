@@ -1,11 +1,10 @@
 import './App.css';
-import Editor from './components/Editor';
-import Rhyme from './components/Rhyme';
+import Nav from './components/Nav';
 function App() {
   return (
     <div className="App">
-      <Rhyme/>
-      <Editor/>
+      <Nav/>
+      {/* <Song/> */}
     </div>
   );
 }
