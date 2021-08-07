@@ -110,7 +110,7 @@ const Menu = ({open, setOpen}) => {
                 <ul className="nav-links">
                     <li  onClick={() => setOpen(!open)}><Link  to='/home'>Home</Link></li>
                     <li  onClick={() => setOpen(!open)}><Link  to='/songbook'>Songbook</Link></li>
-                    <li  onClick={() => setOpen(!open)}><Link to='/'>New Song</Link></li>
+                    <li  onClick={() => setOpen(!open)}><Link to='/lyrics'>New Song</Link></li>
                 </ul>
             </div>
 
@@ -120,7 +120,7 @@ const Menu = ({open, setOpen}) => {
         <Switch>
                 <Route path="/home">Home</Route>
                 <Route path="/songbook"><Songbook/></Route>
-                <Route exact path="/"><Song/></Route>
+                <Route exact path="/lyrics"><Song/></Route>
             </Switch>
         </Router>
     )
