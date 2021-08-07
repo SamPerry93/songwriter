@@ -2,8 +2,8 @@ import React from 'react';
 import { FaMicrophone, FaSearch } from 'react-icons/fa';
 import { IoDocumentTextSharp } from 'react-icons/io5';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
-import Editor from './Editor';
 import "./Editor.css";
+import EditorPage from './EditorPage';
 import Recording from './Recording';
 import Rhyme from './Rhyme';
 const Song = () => {
@@ -22,7 +22,7 @@ const Song = () => {
 
             <Switch>
                 <Route path="/recording"><Recording/></Route>
-                <Route exact path="/lyrics"><Editor/></Route>
+                <Route path="/lyrics"><EditorPage/></Route>
                 <Route path="/words"><Rhyme/></Route>
             </Switch>
         </Router>
