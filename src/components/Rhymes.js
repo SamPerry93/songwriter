@@ -4,20 +4,21 @@ import './Editor.css';
 const Rhymes = ({words,isLoading}) => {
     if(isLoading){
         return(
-            <h2>Loading...</h2>
+            
+            <h2 style={{ fontFamily:'monospace',position:'absolute', left:'50%',transform:"translate(-50%, -50%)"}}>Loading...</h2>
+            
+           
         )
     }else {
         return(
             words.map(rhyme => {
-            if(rhyme.score >= 275 && rhyme.word.length >= 3){
+            if(rhyme.score >= 200 && rhyme.word.length >= 3){
                 return(
+                    
                 <h3 className="return-word-searched" key={rhyme.word}>{rhyme.word}</h3>
+                
             )
-        }else{
-            return(
-                <h3>nothing found</h3>
-            )
-        }
+            }else{return(null)}
     }) 
 )}
 }

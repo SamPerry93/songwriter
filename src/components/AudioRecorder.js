@@ -13,15 +13,13 @@ const useRecorder = () => {
       }
       return;
     }
-
-    // Manage recorder state.
+    
     if (isRecording) {
       recorder.start();
     } else {
       recorder.stop();
     }
 
-    // Obtain the audio when ready.
     const handleData = e => {
       setAudioURL(URL.createObjectURL(e.data));
     };
@@ -40,7 +38,6 @@ const useRecorder = () => {
 
   return [audioURL, isRecording, startRecording, stopRecording];
 };
-
 async function requestRecorder() {
   const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
   return new MediaRecorder(stream);
