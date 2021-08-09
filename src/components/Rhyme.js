@@ -23,12 +23,14 @@ const Rhyme = () => {
 
     return(
         <>
+        <div className="search-section">
             <div className="search-container">
                 <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} /><button onClick={handleSubmit}>Search</button>
             </div>
             <div className="rhyme-container">
                 <Rhymes isLoading={isLoading} words={words}/>
             </div>
+        </div>
         </>
     )
 }

@@ -12,58 +12,33 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #393535;
 }
-.nav-vis {
+.search-section {
   padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #e8ddc4;
-}
-.nav-vis > h1 {
-  font-family: monospace;
-  letter-spacing: 0.15rem;
-  line-height: 2rem;
-  margin: 1rem 0 0 0.5rem;
-  font-size: 2rem;
-  text-shadow: 0 0 5px 0 #333;
-  z-index: 12;
-}
-.nav-vis > button {
-  margin: 0.5rem 1rem 0 0;
+  border: 0.1rem solid #333;
+  background: #d6cfbd;
 }
 .search-container {
   display: flex;
-  top: 5%;
-  margin: 1rem;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+  width: 100%;
 }
 .search-container > input {
   outline: none;
   border: none;
-  width: 100%;
   padding: 0.5rem;
   border-radius: 3px 0 0 3px;
-  box-shadow: 0 0 2px 0 #1e1967;
+  background-color: #fff8e8;
+  /* box-shadow: 0 0 2px 0 #1e1967; */
 }
 .search-container > button {
-  width: 200px;
   padding: 0.5rem;
   outline: none;
   border: none;
   border-radius: 0 3px 3px 0;
   color: #fff8e8;
   background-color: #3b3b6d;
-  box-shadow: 0 0 1px 0 #1e1967;
-}
-.ql-toolbar {
-  height: min-content;
-  z-index: 1;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  background: #f7eace;
-}
-.editor-page > button {
-  position: absolute;
+  /* box-shadow: 0 0 1px 0 #1e1967; */
 }
 .editor-page {
   margin: 1rem;
@@ -71,39 +46,41 @@ body {
 .above-editor {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 0.25rem;
 }
-.above-editor > input {
+.title-text {
   height: 2rem;
-  width: 50%;
-  padding-left: 6px;
+  width: 60%;
+  padding: 0 12px;
   font-size: 1rem;
   font-display: bold;
   background: #e0cfab;
   border: none;
   outline: none;
 }
-.above-editor > button {
+.save-button {
   height: 2rem;
   width: 30%;
-  background: #cf3732;
+  background: #dd5752;
   padding: 0.5rem;
   border: none;
   border-radius: 10px;
   outline: none;
 }
-.text-editor {
+.text-editor-container {
   outline: none;
   border: none;
   padding: 1rem 0;
 }
 
-textarea {
+.text-editor {
   height: 400px;
   width: 100%;
   padding: 10px 20px;
   font-size: 14px;
   font-family: monospace;
-  box-shadow: inset 0 0 8px 0 #5b360fe9;
+  box-shadow: inset 0 0 5px 0 #5b360fe9;
   background: #fff8e8;
   resize: vertical;
   outline: none;
@@ -112,7 +89,6 @@ textarea {
   padding: 10px;
 }
 .rhyme-container {
-  margin: 0.5rem;
   padding: 1rem;
   min-height: 20vh;
   display: grid;
@@ -120,33 +96,17 @@ textarea {
   align-items: center;
   justify-items: center;
   background-color: #fff8e8;
-  box-shadow: inset 0 0 8px 0 #5b360fe9;
+  box-shadow: inset 0 0 1px 0 #5b360fe9;
   font-size: 0.75rem;
 }
 .rhyme-container > h3 {
   font-family: monospace;
 }
-.links {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 80px;
-  background: linear-gradient(#cf3732, #dd3c36, #cf3732);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.song-page-nav {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  list-style-type: none;
-}
+
 .song-page-nav > li {
   text-align: center;
-  width: 100px;
-  margin: 12px;
+  width: 70px;
+  list-style-type: none;
 }
 .song-page-nav > li > a {
   width: 100%;
@@ -191,22 +151,61 @@ audio::-webkit-media-controls-panel {
   font-size: 1rem;
 }
 .nav-links-container {
-  height: 100%;
   width: 100%;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: left;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #dd5752, #da4b46, #dd5752);
+  padding: 1rem;
+}
+.logo-link {
+  text-decoration: none;
+  color: #333;
+  text-shadow: 0 0 5px 0 #333;
+  color: #fff8e8;
+  text-shadow: 1px 1px 2px #333;
 }
 .nav-links {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
 }
 .nav-links > li {
   list-style-type: none;
 }
-.nav-links > li > a {
+.list-link > a {
   text-decoration: none;
-  color: #1e1967;
+  color: #fff8e8;
+}
+.songbook-container {
+  margin: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  gap: 10px;
+}
+.songbook-container > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.25rem;
+  width: 200px;
+  height: 200px;
+  text-decoration: none;
+  color: #282f46;
+  border: 3px solid #9d998f93;
+}
+@media screen and (max-width: 800px) {
+  .songbook-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+  .songbook-container > a {
+    font-size: 2rem;
+    width: 100%;
+    height: 200px;
+    margin: 0.75rem 0;
+  }
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
+import { FaPlus } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import db from '../lib/firebase';
-
 const Songbook = () => {
     const [songbook,setSongbook] = useState([])
 
@@ -18,12 +19,24 @@ const Songbook = () => {
     }, [])
 
     return(
-        songbook.map((song) => {
+        <>
+        <div className="songbook-container">
+        {songbook.map((song) => {
             return(
-                <h2 key={song.id}>{song.title}</h2>
+                <>
+                <Link  key={song.id} to={`/${song.id}`}>
+                   {song.title}
+                    
+                    
+                </Link>
+                
+                </>
             )
            
-        })
+        })}
+        <Link to="/song/editor"><FaPlus/></Link>
+        </div>
+        </>
     )
 }
-export default Songbook;
+export default (Songbook);
