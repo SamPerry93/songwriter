@@ -34,7 +34,7 @@ const Songbook = () => {
             )
            
         })}
-        <Link to="/song/editor"><FaPlus/></Link>
+        <Link to="/editor"><FaPlus/></Link>
         </div>
         </>
     )

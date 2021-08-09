@@ -2,7 +2,6 @@ import "quill/dist/quill.bubble.css";
 import React, { useEffect, useState } from 'react';
 import db from '../lib/firebase';
 import Rhyme from "./Rhyme";
-//const AudioPlayer = React.lazy(() => import('./AudioPlayer'))
 const Editor = () => {
     const [title, setTitle] = useState('');
     const [lyrics, setLyrics] = useState('');
@@ -46,7 +45,6 @@ const Editor = () => {
         <div className="editor-page">
         <div className="above-editor">
             <input className="title-text" type="text" value={title} placeholder="Title" onChange={(e)=> setTitle(e.target.value)} />
-            
             <button className="save-button" onClick={handleClick}>Save</button>
         </div>
         <textarea className="text-editor" value={lyrics} onChange={(e) => setLyrics(e.target.value)}></textarea>
