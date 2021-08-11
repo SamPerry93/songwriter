@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import Editor from './Editor';
 import './Editor.css';
 import OneSong from './OneSong';
-import Song from './Song';
 import Songbook from './Songbook';
 
 
@@ -21,9 +20,9 @@ const Nav = () => {
         
         <Switch>
             <Route exact path="/" component={Songbook}/>
-            <Route exact path="/song" component={Song}/>
-            <Route exact path="/:id" component={OneSong}/>
-            <Route exact path="/editor"><Editor/></Route>
+            
+            <Route exact path="/editor/:id" component={OneSong}/>
+            <Route exact path="/editor"component={Editor}/>
             
         </Switch>
     </Router>

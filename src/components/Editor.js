@@ -8,26 +8,10 @@ const Editor = () => {
 
     useEffect(()=>{
     console.log(lyrics)
+    console.log('new render Editor useEffect')
     }, [lyrics])
 
-    // useEffect( ()=>{
-    //     let isMounted = true;
-    //      db.collection("songbook")
-    //     .orderBy("createdAt", "desc")
-    //     .onSnapshot((querySnapshot) => {
-            
-    //         const _entries = [];
-    //         querySnapshot.forEach((doc) =>{
-                
-    //             _entries.push({
-    //                 id: doc.id,
-    //                 ...doc.data()
-    //             })
-    //         })
-    //         if(isMounted){setLyrics(_entries)}
-            
-    //     });return() => {isMounted = false}
-    // }, []);
+    
     const handleClick = async () =>{
         const date = new Date()
         console.log(lyrics)

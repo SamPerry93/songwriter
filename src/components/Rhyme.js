@@ -13,12 +13,16 @@ const Rhyme = () => {
         fetch(url + search)
         .then(res => res.json())
         .then(response => {
-            
+            console.log('new render from rhyme handleSub')
             setWords(response)
             setLoading(false)
         })
         
         setSearch('')
+    }
+    const searchRhyme = (e) => {
+        setSearch(e.target.value)
+        console.log('new render search Rhyme Rhyme')
     }
 
     return(
@@ -27,7 +31,7 @@ const Rhyme = () => {
             <div className="search-area-container">
                 <h3>Search a Word For Rhymes</h3>
                 <div className="search-container">
-                <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} /><button onClick={handleSubmit}>Search</button>
+                <input type="text" value={search} onChange={searchRhyme} /><button onClick={handleSubmit}>Search</button>
                 </div>
             </div>
             <div className="rhyme-container">
